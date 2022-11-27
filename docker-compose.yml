@@ -1,0 +1,17 @@
+version: '3'
+services:
+  python:
+    build: .
+    container_name: bert_for_masked_language
+    working_dir: /home/user/python
+    volumes:
+      - .:/home/user/python
+    # command: >
+    #   sh -c "
+    #     cd jumanpp-2.0.0-rc3/bld
+    #     make
+    #     make install
+    #   "
+    ports:
+      - 8888:8888
+    tty: true
